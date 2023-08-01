@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NXLinkQA</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+
+
+<!-- 导航栏 -->
+<div class="navigation">
+  <div>
+
+    <div class="global_options">
+      <div>query: </div>
+      <input id="query" placeholder="请输入查询语句" value="what's the InstructGPT ?">
+    </div>
+
+    <div class="global_options" id="search">search</div>
+  </div>
+</div>
+
+
+<!-- 内容 -->
+<div class="content">
+  <div class="left_content">
+    <ul class="v_nav" >
+      <li>good day</li>
+    </ul>
+    <div class="left_content_tips">
+      <table class="tips_table" id=""></table>
+    </div>
+  </div>
+
+  <div class="right_content">
+    <div>
+      <table class="workspace_table" id="nxlink_faq_workspace_table">
+
+      </table>
+    </div>
+    <div id="answer_box" class="llm_result">
+      <div>Answer: </div>
+      <div id="answer"></div>
+    </div>
+  </div>
+
+</div>
+
+
+<!--  底部  -->
+<div class="tail">
+  <div>
+    NX
+  </div>
+</div>
+
+
+<!-- 引入样式和脚本 -->
+<link rel="stylesheet" href="../css/nxlink_qa.css" />
+<script src="../js/nxlink_qa.js"></script>
+
+</body>
+</html>

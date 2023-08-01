@@ -34,8 +34,8 @@ flask_app.add_url_rule(rule="/HeartBeat", view_func=heart_beat, methods=["GET", 
 flask_app.add_url_rule(rule="/NXLinkQA", view_func=nxlink_qa.nxlink_qa_page, methods=["GET"], endpoint="NXLinkQAPage")
 flask_app.add_url_rule(rule="/NXLinkQA/query", view_func=nxlink_qa.query_view_func, methods=["POST"], endpoint="NXLinkQAQuery")
 
-
-# http://127.0.0.1:9080/NXLinkQA
+# http://10.75.27.247:12023/NXLinkQA
+# http://127.0.0.1:12023/NXLinkQA
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
