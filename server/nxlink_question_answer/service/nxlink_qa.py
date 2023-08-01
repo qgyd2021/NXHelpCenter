@@ -82,6 +82,8 @@ class NXLinkFAQElasticIndex(object):
         if not ping_flag:
             raise AssertionError("elasticsearch ping failed.")
 
+        self._build_elastic_index()
+
     def _build_elastic_index(self):
         logger.info("build_elastic_index start. ")
         print("build_elastic_index start. ")
