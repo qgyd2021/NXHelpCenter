@@ -15,7 +15,7 @@ environment = EnvironmentManager(
     env=os.environ.get("environment", "dev"),
 )
 
-port = environment.get(key="port", default=9080, dtype=int)
+port = environment.get(key="port", default=12023, dtype=int)
 
 
 nxlink_question_answer_dataset = environment.get(
