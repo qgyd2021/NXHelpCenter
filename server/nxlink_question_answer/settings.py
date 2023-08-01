@@ -6,7 +6,6 @@ from typing import List
 from project_settings import project_path
 from toolbox.os.environment import EnvironmentManager
 
-
 log_directory = os.path.join(project_path, "server/nxlink_question_answer/logs")
 os.makedirs(log_directory, exist_ok=True)
 
