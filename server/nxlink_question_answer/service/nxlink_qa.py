@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import json
+import logging
 import os
 from typing import List
 
@@ -14,6 +15,7 @@ from langchain.prompts.few_shot import FewShotPromptTemplate
 
 from server.nxlink_question_answer import settings
 
+logger = logging.getLogger("server")
 
 example_prompt = PromptTemplate.from_template(settings.fap_example_prompt_str)
 
@@ -81,6 +83,8 @@ class NXLinkFAQElasticIndex(object):
             raise AssertionError("elasticsearch ping failed.")
 
     def _build_elastic_index(self):
+        logger.info("build_elastic_index start. ")
+
         if self.es_client.indices.exists(index=self.elastic_index):
             self.es_client.indices.delete(index=self.elastic_index)
 
@@ -92,6 +96,7 @@ class NXLinkFAQElasticIndex(object):
                 }
             }
         }
+        logger.info("build_elastic_index create. ")
         self.es_client.indices.create(index=self.elastic_index, body=body)
 
         # 设置文档结构
@@ -136,6 +141,7 @@ class NXLinkFAQElasticIndex(object):
             # 刷新数据
             self.es_client.indices.refresh(index=self.elastic_index)
 
+        logger.info("build_elastic_index finish. ")
         return
 
     def text_split(self, text: str):
