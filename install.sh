@@ -56,7 +56,7 @@ if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then
   /usr/local/python-${python_version}/bin/pip3 install virtualenv
   mkdir -p /data/local/bin
   cd /data/local/bin || exit 1;
-  # source /data/local/bin/OpenLlamaIndex/bin/activate
-  /usr/local/python-${python_version}/bin/virtualenv OpenLlamaIndex
+  # source /data/local/bin/NXHelpCenter/bin/activate
+  /usr/local/python-${python_version}/bin/virtualenv NXHelpCenter
 
 fi
