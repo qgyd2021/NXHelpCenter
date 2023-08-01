@@ -1,0 +1,12 @@
+llama-index==0.7.4
+pypdf==3.11.1
+python-dotenv==1.0.0
+pydantic==1.10.9
+chromadb==0.4.2
+langchain==0.0.229
+sentence-transformers==2.2.2
+Flask==2.3.2
+gevent==23.7.0
+jsonschema==4.18.4
+jieba==0.42.1
+elasticsearch==7.17.8
