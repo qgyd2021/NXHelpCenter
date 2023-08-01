@@ -86,7 +86,6 @@ class NXLinkFAQElasticIndex(object):
 
     def _build_elastic_index(self):
         logger.info("build_elastic_index start. ")
-        print("build_elastic_index start. ")
 
         if self.es_client.indices.exists(index=self.elastic_index):
             self.es_client.indices.delete(index=self.elastic_index)
@@ -99,8 +98,6 @@ class NXLinkFAQElasticIndex(object):
                 }
             }
         }
-        logger.info("build_elastic_index create. ")
-        print("build_elastic_index create. ")
         self.es_client.indices.create(index=self.elastic_index, body=body)
 
         # 设置文档结构
@@ -146,7 +143,6 @@ class NXLinkFAQElasticIndex(object):
             self.es_client.indices.refresh(index=self.elastic_index)
 
         logger.info("build_elastic_index finish. ")
-        print("build_elastic_index finish. ")
         return
 
     def text_split(self, text: str):
